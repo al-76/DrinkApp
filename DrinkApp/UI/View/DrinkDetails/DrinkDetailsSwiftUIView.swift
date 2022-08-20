@@ -14,8 +14,10 @@ class DrinkDetailsHostingController: UIHostingController<DrinkDetailsSwiftUIView
 }
 
 struct DrinkDetailsSwiftUIView: View {
+    var drinkName = "Drink"
+    
     var body: some View {
-        Text("Hello, Drink!")
+        Text("Hello, \(drinkName)!")
     }
 }
 

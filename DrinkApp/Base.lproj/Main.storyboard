@@ -50,7 +50,7 @@
                                 <connections>
                                     <outlet property="drinkIcon" destination="zWD-0E-gRf" id="SeH-Qx-LZ5"/>
                                     <outlet property="drinkLabel" destination="fFL-Q0-paz" id="rRa-dR-B3k"/>
-                                    <segue destination="hMO-tL-qLA" kind="show" id="A17-K5-r4c"/>
+                                    <segue destination="hMO-tL-qLA" kind="show" identifier="showDrinkDetails" id="A17-K5-r4c"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
