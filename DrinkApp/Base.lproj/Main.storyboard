@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JX7-aO-fwD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Drinks Table View Controller-->
+        <scene sceneID="D3L-I2-gy8">
+            <objects>
+                <tableViewController id="JX7-aO-fwD" userLabel="Drinks Table View Controller" customClass="DrinksTableViewController" customModule="DrinkApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="JIc-BX-xRl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="drinkCell" id="beD-ZU-u3R" customClass="DrinksTableViewCell" customModule="DrinkApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="57"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="beD-ZU-u3R" id="BzM-al-LGC">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="57"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="i2u-k7-F41">
+                                            <rect key="frame" x="2" y="2" width="410" height="53"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zWD-0E-gRf" userLabel="Drink icon">
+                                                    <rect key="frame" x="8" y="17" width="24" height="18.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFL-Q0-paz">
+                                                    <rect key="frame" x="36" y="16" width="366" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <edgeInsets key="layoutMargins" top="16" left="8" bottom="16" right="8"/>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="i2u-k7-F41" secondAttribute="bottom" constant="2" id="0lI-K1-UAT"/>
+                                        <constraint firstItem="i2u-k7-F41" firstAttribute="leading" secondItem="BzM-al-LGC" secondAttribute="leading" constant="2" id="MWO-Ya-lZz"/>
+                                        <constraint firstAttribute="trailing" secondItem="i2u-k7-F41" secondAttribute="trailing" constant="2" id="gLw-qA-5zc"/>
+                                        <constraint firstItem="i2u-k7-F41" firstAttribute="top" secondItem="BzM-al-LGC" secondAttribute="top" constant="2" id="jhJ-Od-WUm"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="drinkIcon" destination="zWD-0E-gRf" id="SeH-Qx-LZ5"/>
+                                    <outlet property="drinkLabel" destination="fFL-Q0-paz" id="rRa-dR-B3k"/>
+                                    <segue destination="hMO-tL-qLA" kind="show" id="A17-K5-r4c"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JX7-aO-fwD" id="aQt-YW-weG"/>
+                            <outlet property="delegate" destination="JX7-aO-fwD" id="Djj-Ig-feE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ZGG-3S-Ggc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="voO-Lv-fJO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-96" y="-569"/>
+        </scene>
+        <!--Drink Details Hosting Controller-->
+        <scene sceneID="khy-dJ-sa0">
+            <objects>
+                <hostingController id="hMO-tL-qLA" customClass="DrinkDetailsHostingController" customModule="DrinkApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="CHU-Qd-Pof"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CPQ-7u-6Te" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1032" y="-569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eXh-DE-qhG">
+            <objects>
+                <navigationController id="OwS-fZ-dUD" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qX7-D7-2VJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JX7-aO-fwD" kind="relationship" relationship="rootViewController" id="9z5-Pk-QjB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVg-jf-PcC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-97" y="-1329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
