@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JX7-aO-fwD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OwS-fZ-dUD">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,20 +18,25 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="drinkCell" id="beD-ZU-u3R" customClass="DrinksTableViewCell" customModule="DrinkApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="57"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="116.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="beD-ZU-u3R" id="BzM-al-LGC">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="57"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="116.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="i2u-k7-F41">
-                                            <rect key="frame" x="2" y="2" width="410" height="53"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="i2u-k7-F41">
+                                            <rect key="frame" x="2" y="2" width="410" height="112.5"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zWD-0E-gRf" userLabel="Drink icon">
-                                                    <rect key="frame" x="8" y="17" width="24" height="18.5"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="zWD-0E-gRf" userLabel="Drink icon">
+                                                    <rect key="frame" x="8" y="14.5" width="80" height="84"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="6hD-9q-neU"/>
+                                                        <constraint firstAttribute="width" constant="80" id="D08-d1-jGC"/>
+                                                    </constraints>
+                                                    <imageReference key="image" image="photo.fill" catalog="system" symbolScale="large"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFL-Q0-paz">
-                                                    <rect key="frame" x="36" y="16" width="366" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Some drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFL-Q0-paz">
+                                                    <rect key="frame" x="92" y="46" width="310" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -40,10 +46,10 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="i2u-k7-F41" secondAttribute="bottom" constant="2" id="0lI-K1-UAT"/>
-                                        <constraint firstItem="i2u-k7-F41" firstAttribute="leading" secondItem="BzM-al-LGC" secondAttribute="leading" constant="2" id="MWO-Ya-lZz"/>
-                                        <constraint firstAttribute="trailing" secondItem="i2u-k7-F41" secondAttribute="trailing" constant="2" id="gLw-qA-5zc"/>
-                                        <constraint firstItem="i2u-k7-F41" firstAttribute="top" secondItem="BzM-al-LGC" secondAttribute="top" constant="2" id="jhJ-Od-WUm"/>
+                                        <constraint firstItem="i2u-k7-F41" firstAttribute="leading" secondItem="BzM-al-LGC" secondAttribute="leading" constant="2" id="W7D-ng-FIZ"/>
+                                        <constraint firstItem="i2u-k7-F41" firstAttribute="top" secondItem="BzM-al-LGC" secondAttribute="top" constant="2" id="ZR4-Fm-JLv"/>
+                                        <constraint firstAttribute="trailing" secondItem="i2u-k7-F41" secondAttribute="trailing" constant="2" id="ag8-q2-HUv"/>
+                                        <constraint firstAttribute="bottom" secondItem="i2u-k7-F41" secondAttribute="bottom" constant="2" id="mrQ-ga-ryK"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <gestureRecognizers/>
@@ -59,7 +65,15 @@
                             <outlet property="delegate" destination="JX7-aO-fwD" id="Djj-Ig-feE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ZGG-3S-Ggc"/>
+                    <navigationItem key="navigationItem" title="Drinks" id="ZGG-3S-Ggc"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Y2X-6N-CGR">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <attributedString key="attributedTitle"/>
+                        <connections>
+                            <action selector="pullToRefresh:" destination="JX7-aO-fwD" eventType="valueChanged" id="0fr-yv-UWa"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="voO-Lv-fJO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
