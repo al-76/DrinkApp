@@ -16,4 +16,5 @@ and just pointed out where it'd be better with that (see DrinksTableViewControll
 
 Thanks!
 
-![Simulator Screen Recording - iPhone 11 - 2022-08-21 at 17 16 10](https://user-images.githubusercontent.com/19591052/185796611-78bd506c-bd1c-4c4f-9605-41046d4a0ac0.gif)
+![Simulator Screen Recording - iPhone 11 - 2022-08-21 at 20 03 16](https://user-images.githubusercontent.com/19591052/185802548-1350c014-ab68-4bbc-a06b-c803b3657efd.gif)
+
