@@ -44,7 +44,8 @@ private extension DrinkDetails {
                   category: "\(testId)Category",
                   glass: "\(testId)Glass",
                   instructions: "\(testId)Instructions",
-                  imageUrl: "\(testId)ImageUrl")
+                  imageUrl: "\(testId)ImageUrl",
+                  ingredients: ["\(testId)Ingredient"])
     }
 }
 

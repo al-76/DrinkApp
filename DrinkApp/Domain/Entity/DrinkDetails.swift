@@ -14,4 +14,5 @@ struct DrinkDetails: Identifiable, Codable, Equatable {
     let glass: String
     let instructions: String
     let imageUrl: String
+    let ingredients: [String]
 }

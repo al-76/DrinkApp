@@ -21,6 +21,7 @@ private struct FakeNetwork: Network {
                         "strGlass": "testGlass",
                         "strInstructions": "testInstructions",
                         "strDrinkThumb": "testUrl",
+                        "strIngredient1": "testIngredient"
                     }]
                 }
                 """.utf8))
@@ -44,7 +45,7 @@ private struct FakeEmptyResponseNetwork: Network {
 class DefaultDrinkDetailsRepositoryTests: XCTestCase {
     func testRead() throws {
         // Arrange
-        let testDrinkDetails = DrinkDetails(id: "testId", name: "testDrink", category: "testCategory", glass: "testGlass", instructions: "testInstructions", imageUrl: "testUrl")
+        let testDrinkDetails = DrinkDetails(id: "testId", name: "testDrink", category: "testCategory", glass: "testGlass", instructions: "testInstructions", imageUrl: "testUrl", ingredients: ["testIngredient"])
         let repository = DefaultDrinkDetailsRepository(network: FakeNetwork())
         
         // Act

@@ -40,7 +40,7 @@ struct DrinkDetailsSwiftUIView: View {
                 }
                 
                 Text(details.name)
-                    .font(.title2)
+                    .font(.title)
                 Divider()
                 Group {
                     Text(details.category)
@@ -51,6 +51,11 @@ struct DrinkDetailsSwiftUIView: View {
                 Divider()
                 Text(details.instructions)
                     .font(.body)
+                Divider()
+                ForEach(details.ingredients, id: \.self) { ingredient in
+                    Text(ingredient)
+                        .font(.body)
+                }
 
             case .failure(let error):
                 Group {
