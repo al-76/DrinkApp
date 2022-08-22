@@ -5,7 +5,7 @@ Hi!
 ## Architecture notes
 - I've used Clean Architecture (without Use Cases because of the easy task) + MVVM with UI states (MVI) on the Presentation/UI layer.
 The app has 3 layers - UI (View, View Models), Domain (Entity, Data repositories gateways), Data (Repositories, DTO)
-- I haven't unit tested the UI layer because I think UI tests work better here (but an approach with UI testing still works and that also depends on team/app/preferences etc)
+- I haven't unit tested the UI layer because I think UI tests work better here (but of course it depends on team/app/preferences etc).
 - I've used simplified DTO with CodingKeys instead of more traditional DTO Mappers (see DrinkDTO.swift, DrinkDetailsResponseDTO.swift)
 
 ## Other implementation notes
@@ -16,4 +16,5 @@ and just pointed out where it'd be better with that (see DrinksTableViewControll
 
 Thanks!
 
-![Simulator Screen Recording - iPhone 11 - 2022-08-21 at 17 16 10](https://user-images.githubusercontent.com/19591052/185796611-78bd506c-bd1c-4c4f-9605-41046d4a0ac0.gif)
+![Simulator Screen Recording - iPhone 11 - 2022-08-21 at 20 03 16](https://user-images.githubusercontent.com/19591052/185802548-1350c014-ab68-4bbc-a06b-c803b3657efd.gif)
+
