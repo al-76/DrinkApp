@@ -14,7 +14,7 @@ final class DrinksTableViewController: UITableViewController {
     
     private var dataSource: TableViewDataSource<Drink>?
     private var cancellable: AnyCancellable?
-    private let imageCache = URLCache()
+    private let imageCache = URLCache(memoryCapacity: 1024 * 1024 * 10, diskCapacity: 1024 * 1024 * 50)
 
     override func viewDidLoad() {
         super.viewDidLoad()
