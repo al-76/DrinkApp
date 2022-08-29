@@ -21,7 +21,7 @@ final class DefaultDrinksRepository: DrinksRepository {
         network
             .request(url: apiUrl)
             .decode(type: DrinkResponseDTO.self, decoder: JSONDecoder())
-            .tryMap { $0.drinks }
+            .map { $0.drinks }
             .eraseToAnyPublisher()
     }
 }
