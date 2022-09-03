@@ -29,7 +29,7 @@ private struct FakeNetwork: Network {
 class DefaultDrinksRepositoryTests: XCTestCase {
     func testRead() throws {
         // Arrange
-        let testDrink = [Drink(id: "testId", name: "testDrink", imageUrl: "testUrl")]
+        let testDrink = [Drink(id: "testId", name: "testDrink", imageUrl: "testUrl/preview")]
         let repository = DefaultDrinksRepository(network: FakeNetwork())
         
         // Act

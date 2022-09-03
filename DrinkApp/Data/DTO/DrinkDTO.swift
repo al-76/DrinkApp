@@ -19,3 +19,12 @@ extension Drink {
         case imageUrl = "strDrinkThumb"
     }
 }
+
+extension Drink {
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(String.self, forKey: .id)
+        name = try container.decode(String.self, forKey: .name)
+        imageUrl = try container.decode(String.self, forKey: .imageUrl) + "/preview"
+    }
+}
